@@ -1,7 +1,7 @@
 Git Clone
-git clone https://github.com/hninoo/movie-api.git
+### git clone https://github.com/hninoo/movie-api.git
 OR
-git clone git@github.com:hninoo/movie-api.git
+### git clone git@github.com:hninoo/movie-api.git
 
 In the project directory, you can install:
 
