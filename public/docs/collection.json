@@ -1,0 +1,395 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "ee2015cd-4070-4743-8c53-820ac6358bde",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"aut\",\"email\":\"bernadette14@example.net\",\"password\":\"temporibus\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"officia\",\"password\":\"sint\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"quam\",\"summary\":\"commodi\",\"coverImage\":\"expedita\",\"genreIds\":[],\"tagIds\":[],\"imdbRatings\":\"deserunt\",\"pdfLink\":\"et\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"temporibus\",\"summary\":\"ullam\",\"genreIds\":[],\"tagIds\":[],\"imdbRatings\":\"officiis\",\"pdfLink\":\"laborum\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Movie List Without Auth",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movie-list",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movie-list"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"result\":{\"data\":[{\"id\":12,\"title\":\"Super man\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686973209.png\",\"imdbRatings\":10,\"comments\":[]},{\"id\":11,\"title\":\"Super man\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686945119.png\",\"imdbRatings\":10,\"comments\":[]},{\"id\":8,\"title\":\"Super man\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686943283.png\",\"imdbRatings\":10,\"comments\":[]},{\"id\":7,\"title\":\"ABC\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686943245.png\",\"imdbRatings\":10,\"comments\":[{\"id\":2,\"movieId\":7,\"email\":\"test@gmail.com\",\"createdAt\":\"42 seconds ago\"}]}],\"pagination\":{\"lastPage\":1,\"currentPage\":1,\"perPage\":10,\"totalItems\":4}},\"statusCode\":200,\"message\":\"Success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movies\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movies\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"result\":{\"id\":7,\"title\":\"ABC\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686943245.png\",\"genres\":[{\"id\":1,\"name\":\"Romance\"}],\"authorName\":\"hninoo\",\"tags\":[{\"id\":1,\"name\":\"Romance\"}],\"imdbRatings\":10,\"pdfLink\":\"https:\\\/\\\/en.wikipedia.org\\\/wiki\\\/Spider-Man\",\"comments\":[{\"id\":2,\"movieId\":7,\"email\":\"test@gmail.com\",\"createdAt\":\"42 seconds ago\"}],\"relatedMovies\":[{\"id\":8,\"title\":\"Super man\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686943283.png\",\"imdbRatings\":10,\"comments\":[]},{\"id\":11,\"title\":\"Super man\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686945119.png\",\"imdbRatings\":10,\"comments\":[]},{\"id\":12,\"title\":\"Super man\",\"summary\":\"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/1686973209.png\",\"imdbRatings\":10,\"comments\":[]}]},\"statusCode\":200,\"message\":\"Success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Comment Create",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/comment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/comment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"movieId\":7,\"email\":\"victor.kerluke@example.com\",\"comment\":\"aspernatur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

@@ -1,0 +1,496 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: aut
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: bernadette14@example.net
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: temporibus
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: aut
+      email: bernadette14@example.net
+      password: temporibus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: officia
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: sint
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: officia
+      password: sint
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/movies
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/movies
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: quam
+        type: string
+        custom: []
+      summary:
+        name: summary
+        description: ''
+        required: true
+        example: commodi
+        type: string
+        custom: []
+      coverImage:
+        name: coverImage
+        description: ''
+        required: true
+        example: expedita
+        type: string
+        custom: []
+      genreIds:
+        name: genreIds
+        description: ''
+        required: true
+        example: []
+        type: object
+        custom: []
+      tagIds:
+        name: tagIds
+        description: ''
+        required: true
+        example: []
+        type: object
+        custom: []
+      imdbRatings:
+        name: imdbRatings
+        description: ''
+        required: true
+        example: deserunt
+        type: string
+        custom: []
+      pdfLink:
+        name: pdfLink
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: quam
+      summary: commodi
+      coverImage: expedita
+      genreIds: []
+      tagIds: []
+      imdbRatings: deserunt
+      pdfLink: et
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/movies/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie.'
+        required: true
+        example: 7
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 7
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: temporibus
+        type: string
+        custom: []
+      summary:
+        name: summary
+        description: ''
+        required: true
+        example: ullam
+        type: string
+        custom: []
+      genreIds:
+        name: genreIds
+        description: ''
+        required: true
+        example: []
+        type: object
+        custom: []
+      tagIds:
+        name: tagIds
+        description: ''
+        required: true
+        example: []
+        type: object
+        custom: []
+      imdbRatings:
+        name: imdbRatings
+        description: ''
+        required: true
+        example: officiis
+        type: string
+        custom: []
+      pdfLink:
+        name: pdfLink
+        description: ''
+        required: true
+        example: laborum
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: temporibus
+      summary: ullam
+      genreIds: []
+      tagIds: []
+      imdbRatings: officiis
+      pdfLink: laborum
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/movies/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie.'
+        required: true
+        example: 7
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 7
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/movie-list
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Movie List Without Auth'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"result":{"data":[{"id":12,"title":"Super man","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686973209.png","imdbRatings":10,"comments":[]},{"id":11,"title":"Super man","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686945119.png","imdbRatings":10,"comments":[]},{"id":8,"title":"Super man","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686943283.png","imdbRatings":10,"comments":[]},{"id":7,"title":"ABC","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686943245.png","imdbRatings":10,"comments":[{"id":2,"movieId":7,"email":"test@gmail.com","createdAt":"42 seconds ago"}]}],"pagination":{"lastPage":1,"currentPage":1,"perPage":10,"totalItems":4}},"statusCode":200,"message":"Success"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/movies/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie.'
+        required: true
+        example: 7
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 7
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"result":{"id":7,"title":"ABC","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686943245.png","genres":[{"id":1,"name":"Romance"}],"authorName":"hninoo","tags":[{"id":1,"name":"Romance"}],"imdbRatings":10,"pdfLink":"https:\/\/en.wikipedia.org\/wiki\/Spider-Man","comments":[{"id":2,"movieId":7,"email":"test@gmail.com","createdAt":"42 seconds ago"}],"relatedMovies":[{"id":8,"title":"Super man","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686943283.png","imdbRatings":10,"comments":[]},{"id":11,"title":"Super man","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686945119.png","imdbRatings":10,"comments":[]},{"id":12,"title":"Super man","summary":"Spider-Man is a superhero appearing in American comic books published by Marvel Comics.","coverImage":"http:\/\/localhost\/1686973209.png","imdbRatings":10,"comments":[]}]},"statusCode":200,"message":"Success"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/comment
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Comment Create'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      movieId:
+        name: movieId
+        description: ''
+        required: true
+        example: 7
+        type: integer
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: victor.kerluke@example.com
+        type: string
+        custom: []
+      comment:
+        name: comment
+        description: ''
+        required: true
+        example: aspernatur
+        type: string
+        custom: []
+    cleanBodyParameters:
+      movieId: 7
+      email: victor.kerluke@example.com
+      comment: aspernatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

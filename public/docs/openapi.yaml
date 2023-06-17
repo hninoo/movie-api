@@ -1,0 +1,583 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: aut
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: bernadette14@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: temporibus
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: officia
+                password:
+                  type: string
+                  description: ''
+                  example: sint
+              required:
+                - email
+                - password
+      security: []
+  /api/movies:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: quam
+                summary:
+                  type: string
+                  description: ''
+                  example: commodi
+                coverImage:
+                  type: string
+                  description: ''
+                  example: expedita
+                genreIds:
+                  type: object
+                  description: ''
+                  example: []
+                  properties: []
+                tagIds:
+                  type: object
+                  description: ''
+                  example: []
+                  properties: []
+                imdbRatings:
+                  type: string
+                  description: ''
+                  example: deserunt
+                pdfLink:
+                  type: string
+                  description: ''
+                  example: et
+              required:
+                - title
+                - summary
+                - coverImage
+                - genreIds
+                - tagIds
+                - imdbRatings
+                - pdfLink
+      security: []
+  '/api/movies/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: temporibus
+                summary:
+                  type: string
+                  description: ''
+                  example: ullam
+                genreIds:
+                  type: object
+                  description: ''
+                  example: []
+                  properties: []
+                tagIds:
+                  type: object
+                  description: ''
+                  example: []
+                  properties: []
+                imdbRatings:
+                  type: string
+                  description: ''
+                  example: officiis
+                pdfLink:
+                  type: string
+                  description: ''
+                  example: laborum
+              required:
+                - title
+                - summary
+                - genreIds
+                - tagIds
+                - imdbRatings
+                - pdfLink
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result:
+                    id: 7
+                    title: ABC
+                    summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                    coverImage: 'http://localhost/1686943245.png'
+                    genres:
+                      -
+                        id: 1
+                        name: Romance
+                    authorName: hninoo
+                    tags:
+                      -
+                        id: 1
+                        name: Romance
+                    imdbRatings: 10
+                    pdfLink: 'https://en.wikipedia.org/wiki/Spider-Man'
+                    comments:
+                      -
+                        id: 2
+                        movieId: 7
+                        email: test@gmail.com
+                        createdAt: '42 seconds ago'
+                    relatedMovies:
+                      -
+                        id: 8
+                        title: 'Super man'
+                        summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                        coverImage: 'http://localhost/1686943283.png'
+                        imdbRatings: 10
+                        comments: []
+                      -
+                        id: 11
+                        title: 'Super man'
+                        summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                        coverImage: 'http://localhost/1686945119.png'
+                        imdbRatings: 10
+                        comments: []
+                      -
+                        id: 12
+                        title: 'Super man'
+                        summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                        coverImage: 'http://localhost/1686973209.png'
+                        imdbRatings: 10
+                        comments: []
+                  statusCode: 200
+                  message: Success
+                properties:
+                  result:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 7
+                      title:
+                        type: string
+                        example: ABC
+                      summary:
+                        type: string
+                        example: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                      coverImage:
+                        type: string
+                        example: 'http://localhost/1686943245.png'
+                      genres:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            name: Romance
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            name:
+                              type: string
+                              example: Romance
+                      authorName:
+                        type: string
+                        example: hninoo
+                      tags:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            name: Romance
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            name:
+                              type: string
+                              example: Romance
+                      imdbRatings:
+                        type: integer
+                        example: 10
+                      pdfLink:
+                        type: string
+                        example: 'https://en.wikipedia.org/wiki/Spider-Man'
+                      comments:
+                        type: array
+                        example:
+                          -
+                            id: 2
+                            movieId: 7
+                            email: test@gmail.com
+                            createdAt: '42 seconds ago'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 2
+                            movieId:
+                              type: integer
+                              example: 7
+                            email:
+                              type: string
+                              example: test@gmail.com
+                            createdAt:
+                              type: string
+                              example: '42 seconds ago'
+                      relatedMovies:
+                        type: array
+                        example:
+                          -
+                            id: 8
+                            title: 'Super man'
+                            summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage: 'http://localhost/1686943283.png'
+                            imdbRatings: 10
+                            comments: []
+                          -
+                            id: 11
+                            title: 'Super man'
+                            summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage: 'http://localhost/1686945119.png'
+                            imdbRatings: 10
+                            comments: []
+                          -
+                            id: 12
+                            title: 'Super man'
+                            summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage: 'http://localhost/1686973209.png'
+                            imdbRatings: 10
+                            comments: []
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 8
+                            title:
+                              type: string
+                              example: 'Super man'
+                            summary:
+                              type: string
+                              example: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage:
+                              type: string
+                              example: 'http://localhost/1686943283.png'
+                            imdbRatings:
+                              type: integer
+                              example: 10
+                            comments:
+                              type: array
+                              example: []
+                  statusCode:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: Success
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the movie.'
+        example: 7
+        required: true
+        schema:
+          type: integer
+  /api/movie-list:
+    get:
+      summary: 'Movie List Without Auth'
+      operationId: movieListWithoutAuth
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result:
+                    data:
+                      -
+                        id: 12
+                        title: 'Super man'
+                        summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                        coverImage: 'http://localhost/1686973209.png'
+                        imdbRatings: 10
+                        comments: []
+                      -
+                        id: 11
+                        title: 'Super man'
+                        summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                        coverImage: 'http://localhost/1686945119.png'
+                        imdbRatings: 10
+                        comments: []
+                      -
+                        id: 8
+                        title: 'Super man'
+                        summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                        coverImage: 'http://localhost/1686943283.png'
+                        imdbRatings: 10
+                        comments: []
+                      -
+                        id: 7
+                        title: ABC
+                        summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                        coverImage: 'http://localhost/1686943245.png'
+                        imdbRatings: 10
+                        comments:
+                          -
+                            id: 2
+                            movieId: 7
+                            email: test@gmail.com
+                            createdAt: '42 seconds ago'
+                    pagination:
+                      lastPage: 1
+                      currentPage: 1
+                      perPage: 10
+                      totalItems: 4
+                  statusCode: 200
+                  message: Success
+                properties:
+                  result:
+                    type: object
+                    properties:
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 12
+                            title: 'Super man'
+                            summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage: 'http://localhost/1686973209.png'
+                            imdbRatings: 10
+                            comments: []
+                          -
+                            id: 11
+                            title: 'Super man'
+                            summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage: 'http://localhost/1686945119.png'
+                            imdbRatings: 10
+                            comments: []
+                          -
+                            id: 8
+                            title: 'Super man'
+                            summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage: 'http://localhost/1686943283.png'
+                            imdbRatings: 10
+                            comments: []
+                          -
+                            id: 7
+                            title: ABC
+                            summary: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage: 'http://localhost/1686943245.png'
+                            imdbRatings: 10
+                            comments:
+                              -
+                                id: 2
+                                movieId: 7
+                                email: test@gmail.com
+                                createdAt: '42 seconds ago'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 12
+                            title:
+                              type: string
+                              example: 'Super man'
+                            summary:
+                              type: string
+                              example: 'Spider-Man is a superhero appearing in American comic books published by Marvel Comics.'
+                            coverImage:
+                              type: string
+                              example: 'http://localhost/1686973209.png'
+                            imdbRatings:
+                              type: integer
+                              example: 10
+                            comments:
+                              type: array
+                              example: []
+                      pagination:
+                        type: object
+                        properties:
+                          lastPage:
+                            type: integer
+                            example: 1
+                          currentPage:
+                            type: integer
+                            example: 1
+                          perPage:
+                            type: integer
+                            example: 10
+                          totalItems:
+                            type: integer
+                            example: 4
+                  statusCode:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: Success
+      tags:
+        - Endpoints
+      security: []
+  /api/comment:
+    post:
+      summary: 'Comment Create'
+      operationId: commentCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                movieId:
+                  type: integer
+                  description: ''
+                  example: 7
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: victor.kerluke@example.com
+                comment:
+                  type: string
+                  description: ''
+                  example: aspernatur
+              required:
+                - movieId
+                - email
+                - comment
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
